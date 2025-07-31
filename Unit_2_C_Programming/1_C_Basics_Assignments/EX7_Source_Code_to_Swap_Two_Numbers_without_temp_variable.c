@@ -15,9 +15,11 @@ int main (){
     printf("enter value num2 :");
     fflush(stdin); fflush(stdout);
     scanf("%f",&y);
-     x=y;
-    printf("After swappin;g, value of num1 %f\n ",x);
-    y=x;
-    printf("After swapping, value of  num2 %f\n ",y);
+
+    x=x+y; //num1+num2  // x now holds the sum of original x and y
+    y=x-y; // num1+num2-num2=num1  // y now holds the original value of x
+    x=x-y; //num1+num2-num1=num2    // y now holds the original value of x
+    printf("After swapping, value of num1 %f\n:",x);
+    printf("After swapping, value of  num2 %f\n: ",y);
         return 0;
 }
